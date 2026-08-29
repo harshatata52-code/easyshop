@@ -1,0 +1,1 @@
+{% extends 'base.html' %}{% block content %}<h1>My Orders 📦</h1>{% for o in orders %}<div class="order"><div><h2>Order #{{o.id}}</h2><p>{{o.created_at}} · ₹{{'%.0f'|format(o.total)}}</p><p>{{o.address}}</p></div><strong>{{o.status}}</strong></div>{% else %}<div class="empty"><h2>No orders yet</h2></div>{% endfor %}{% endblock %}
